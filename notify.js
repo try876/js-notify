@@ -22,16 +22,16 @@
           opt.tag = guid()
           var n = new Notification(title, opt);
           n.onclick = function () {
-              opt.onclick && opt.onclick(this);
+              opt.onclick && opt.onclick(opt);
               this.close();
           };
           n.onclose = function () {
-              opt.onclose && opt.onclose(this);
+              opt.onclose && opt.onclose(opt);
           };
           return n;
       }
       else if (Notification.permission === 'denied') {
-          (options && options.ondenied) && options.ondenied(this);
+          (options && options.ondenied) && options.ondenied(opt);
       }
   };
   if ( typeof module === "object" && module && typeof module.exports === "object" ) {
