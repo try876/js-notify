@@ -1,3 +1,16 @@
+修改后的使用示例
+```
+notify('title', {
+    body: 'Notification Text',
+    icon: 'path/to/image.png',
+    custom_url: 'http://wwww.google.com'
+    onclick: function(e) {windows.open(e.custom_url)}, // e -> notify的第二个参数
+    onclose: function(e) {},
+    ondenied: function(e) {}
+  });
+```
+===以下为原项目说明===
+
 # js-notify
 
 Wrapper for the browser Notification object.
