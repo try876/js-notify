@@ -18,7 +18,7 @@
       }
       else if (Notification.permission === 'granted') {
           if(!title) return undefined;
-          opt = options || {}
+          var opt = options || {}
           opt.tag = guid()
           var n = new Notification(title, opt);
           n.onclick = function () {
