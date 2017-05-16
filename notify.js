@@ -31,7 +31,7 @@
           return n;
       }
       else if (Notification.permission === 'denied') {
-          (options && options.ondenied) && options.ondenied(opt);
+          (options && options.ondenied) && options.ondenied(options);
       }
   };
   if ( typeof module === "object" && module && typeof module.exports === "object" ) {
